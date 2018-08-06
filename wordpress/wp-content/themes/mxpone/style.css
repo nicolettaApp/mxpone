@@ -871,7 +871,7 @@ content: "  ";
         justify-content: space-between}
     
    
-    
+   /*....................HERO IMAGE....................*/ 
     
     .heroImage
     {
@@ -892,10 +892,12 @@ content: "  ";
         height: auto;
         max-height: 200px;
         border: 1px solid white;
-        background: rgba(47.8%,47.8%,47.8%,0.6);
+        
+       
         
         
 }
+
 
 .heroText h2 
 {
@@ -903,9 +905,9 @@ content: "  ";
     font-family: OldStandardTT Bold;
 }
         
-    
+
   
-/*................end header............*/
+/*................end header-HERO IMAGE............*/
     
     
 /*--------------------------------------------------------------

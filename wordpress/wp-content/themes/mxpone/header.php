@@ -59,14 +59,17 @@
             </nav></span></div>
             
 <hr>
-               
+<?php if ( get_header_image() && is_front_page () ) : ?>
  <div class="heroImage">
-        <?php the_header_image_tag(); ?>
+      <?php the_header_image_tag(); ?>" alt="">
         <div class="heroText">
+           
             <h2> Light Up your Corner</h2>
             <p>Lifestyle </p>
         </div>
-        </div>
+       
+        </div>  
+            <?php endif; ?>
 	</header><!-- #masthead -->
 
  
