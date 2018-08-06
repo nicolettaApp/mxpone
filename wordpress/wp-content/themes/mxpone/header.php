@@ -16,6 +16,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
 	<link rel="stylesheet" href="style.css">
 
 	<?php wp_head(); ?>
@@ -40,25 +43,36 @@
 		<!-- #site-navigation -->
 		
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$mxpone_description = get_bloginfo( 'description', 'display' );
-			if ( $mxpone_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $mxpone_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
 		
+			<div class="site-branding">
+			<?php the_custom_logo(); ?>
+		</div><!-- .site-branding -->
+		
+		
+		<div class="yellowHr"><span>	<nav class="social-menu">
+       <?php
+			wp_nav_menu( array(
+				'theme_location' => 'social',
+			) );
+			?>
+        
+            </nav></span></div>
+            
+<hr>
+               
+ <div class="heroImage">
+        <?php the_header_image_tag(); ?>
+        <div class="heroText">
+            <h2> Light Up your Corner</h2>
+            <p>Lifestyle </p>
+        </div>
+        </div>
 	</header><!-- #masthead -->
 
+ 
+
+	<div class="site-content-contain">
 	<div id="content" class="site-content">
+	
+      
+        </div>
