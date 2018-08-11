@@ -111,8 +111,8 @@ function mxpone_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'mxpone' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title"><span><i></i>',
-		'after_title'   => '<i></i></span></h2>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'mxpone_widgets_init' );

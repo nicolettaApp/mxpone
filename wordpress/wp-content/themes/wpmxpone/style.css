@@ -1,19 +1,19 @@
 /*!
-Theme Name: mxp_One
+Theme Name: wpmxpone
 Theme URI: http://underscores.me/
 Author: Mezei Nicoleta
-Author URI: https://wordpress.org/mxpone
-Description: Our 2018 default theme is clean, blog-focused, and designed for clarity. mxp_One\'s simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Author URI: https://wordpress.org/
+Description: Our 2018 default theme is clean, blog-focused, and designed for clarity. mxpOne\'s simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: mxpone
+Text Domain: wpmxpone
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-mxpone is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+wpmxpone is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -62,6 +62,23 @@ html {
         box-sizing: border-box;
 
 }
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;	
+}
+.site-content .content-area {
+	float: left;
+	width: 70%;
+	padding-right: 70px;
+}
+.site-content .widget-area {
+	float: right;
+	width: 30%;
+	padding-top: 25px;
+}
+
 /* Sections
 	 ========================================================================== */
 
@@ -70,11 +87,7 @@ html {
  */
 
 body {
-	margin: 0 auto;
-    max-width: 900px;
-    
-    
-   
+	margin: 0;
 }
 
 /**
@@ -616,13 +629,7 @@ textarea {
 
 /*--------------------------------------------------------------
 # Navigation
-
-
-
 --------------------------------------------------------------*/
-
-
-
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -649,24 +656,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-
-/*....header-search {
-	position: absolute;
-	display: block;
-	text-align: right;
-	margin-left: 1050px;
-	margin-top: -42px;
-}
-
-.search-field{
-	border: none;
-}
-
-.search-submit{
-	display: none;
-}
-...*/
-
 .main-navigation {
 	display: block;
 	border-top: 1px solid lightgray;
@@ -766,29 +755,19 @@ content: "  ";
 	}
 }
 
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-	margin: 0 0 2.5em;
-	overflow: hidden;
+.site-branding {
+	padding: 30px 0;
+	text-align: center;
+}
+.site-branding a {
+	display: inline-block;
+	vertical-align: top;
+	user-select: none;
+}
+.site-branding img {
+	display: block;
 }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
-/*...........HEADER...............*/
 /*.........social menu....................*/
 
 .social-menu ul
@@ -803,7 +782,7 @@ content: "  ";
 .social-menu a
 {
    display: block;
-    padding: .5em 1em;
+    padding: .2em 0.7em;
     color: grey;
     text-decoration: none;
     
@@ -812,6 +791,7 @@ content: "  ";
 {
     content: "___";
     color: #f8c268;
+   
 }
 
 .social-menu ul:after
@@ -824,33 +804,8 @@ content: "  ";
 .icons a:hover { background-position: left -34px; }
 
 /*...............end social menu................*/
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding-left: 15px;
-	padding-right: 15px;	
-}
+/*............Header Img..............*/
 
-.site-content {
-	overflow: hidden;
-}
-.site-content .content-area {
-	float: left;
-	width: 70%;
-    padding: 35px;
-}
-.site-content .widget-area {
-	float: left;
-	width: 30%;
-}
-.site-content .widget-area a {
-	word-break: break-all;
-}
-
-.site-content .widget
-{
-    list-style: none;
-}
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -874,92 +829,6 @@ content: "  ";
 	width: 50%;
 }
 
-
-@media screen (min-width: query__medium)
-
-    .site-header
-    {
-        display: flex;
-        justify-content: space-between}
-    
-   
-   /*....................HERO IMAGE....................*/ 
-    
-    .heroImage
-    {
-     position: relative;
-    text-align: center;
-        color: white;
-    }
-    
-
-.heroText {
-	  position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-        width: 100%;
-        max-width: 450px;
-        height: auto;
-        max-height: 200px;
-     border: 1px solid #fff;
-    z-index: 3;
-
-
-}
-.heroText-border
-{
-     border:1px solid #fff;
-  padding:10px;
-}
-
-.heroText-content
-{
-    padding:15px;
-    font-family: OldStandardTT Bold;
-      background-color: rgba(255,255,255,0.2);
-    z-index: 2;
-
-}
-    
-/*..    .heroText 
-    { 
-   position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-        width: 100%;
-        max-width: 450px;
-        height: auto;
-        max-height: 200px;
-        border: 1px solid white;
-        
-}
-
-
-.heroText h2 
-{
-    padding: 10px;
-    font-family: OldStandardTT Bold;
-}..*/
-        
-.site-branding {
-	padding: 30px 0;
-	text-align: center;
-}
-.site-branding a {
-	display: inline-block;
-	vertical-align: top;
-	user-select: none;
-}
-.site-branding img {
-	display: block;
-}
-
-  
-/*................end header-HERO IMAGE............*/
-    
-    
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1059,53 +928,13 @@ content: "  ";
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 85px;
+	margin: 0 0 1.5em;
 	/* Make sure select elements fit in widgets. */
-text-align:center;
-    border: 1px solid #dedede;
 }
 
 .widget select {
 	max-width: 100%;
 }
-.widget ul li
-{
- list-style-type: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-.widget-title {
-	position: relative;
-	text-align: center;
-	margin: 20px 0 20px;
-	z-index: 2;
-	font-size: 20px;
-}
-.widget-title span {
-	position: relative;
-	border: 1px solid #dedede;
-	background: #FFF;
-	display: inline-block;
-	vertical-align: top;
-	margin: 0;
-	text-transform: uppercase;
-	padding: 11px 5px 6px; /* headings fonts had a weird lineheight */
-}
-.widget-title span:before {
-	content: ' ';
-	position: absolute;
-	top: -7px;
-	left: -7px;
-	width: 100%;
-	height: 100%;
-	background: #FFF;
-	border: 1px solid #dedede;
-	z-index: -1;
-}
-
-.widget
 
 /*--------------------------------------------------------------
 # Content
@@ -1124,29 +953,7 @@ text-align:center;
 .updated:not(.published) {
 	display: none;
 }
-/*school modif day 2 ........*/
 
-.entry-header .entry-title
-{
-    text-align: center;
-    position: relative;
-    
-}
-
-.entry-header .entry-title:after
-{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 3px;
-    background-color: yellow;
-    content: " ";
-    
-    
-}
-  
 .page-content,
 .entry-content,
 .entry-summary {
@@ -1278,18 +1085,4 @@ object {
 
 .gallery-caption {
 	display: block;
-}
-
-
-.site-footer
-{ 
- position: absolute;
-    left: 0;
-    bottom: 0;
-    
-    width: 100%;
-    height: 50px;
-    background-color: black;
-    color: white;
-    text-align: center;
 }

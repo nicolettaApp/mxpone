@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package mxpone
+ * @package wpmxpone
  */
 
 ?>
@@ -18,30 +18,24 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
-
-	<link rel="stylesheet" href="style.css">
-
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mxpone' ); ?></a>
+<div  class="container">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wpmxpone' ); ?></a>
 
 	<header id="masthead" class="site-header">
-
 	<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mxpone' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wpmxpone' ); ?></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-        
-		</nav>
-		<!-- #site-navigation -->
+		</nav><!-- #site-navigation -->
 		
 		<div class="site-branding">
 		
@@ -60,13 +54,14 @@
             </nav></span></div>
             
 <hr>
-<?php if ( get_header_image() && is_front_page () ) : ?>
+
+	<?php if ( get_header_image() && is_front_page () ) : ?>
  <div class="heroImage">
-      <?php the_header_image_tag(); ?>
-        <div class="heroText" class="heroText-border">
+      <?php the_header_image_tag(); ?>" alt="">
+        <div class="heroText">
            
-            <div class="heroText-content" ><h2> Light Up your Corner</h2>
-            <p>Lifestyle June 18, 2015 </p></div>
+            <h2> Light Up your Corner</h2>
+            <p>Lifestyle </p>
         </div>
        
         </div>  
@@ -74,9 +69,6 @@
 	</header><!-- #masthead -->
 
  
-
-	<div class="site-content-contain">
-	<div id="content" class="site-content">
 	
-      
-        
+
+	<div id="content" class="site-content">

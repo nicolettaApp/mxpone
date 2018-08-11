@@ -650,7 +650,7 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 
-/*....header-search {
+.header-search {
 	position: absolute;
 	display: block;
 	text-align: right;
@@ -665,8 +665,6 @@ a:hover, a:active {
 .search-submit{
 	display: none;
 }
-...*/
-
 .main-navigation {
 	display: block;
 	border-top: 1px solid lightgray;
@@ -837,7 +835,6 @@ content: "  ";
 .site-content .content-area {
 	float: left;
 	width: 70%;
-    padding: 35px;
 }
 .site-content .widget-area {
 	float: left;
@@ -847,9 +844,18 @@ content: "  ";
 	word-break: break-all;
 }
 
-.site-content .widget
-{
-    list-style: none;
+
+.site-branding {
+	padding: 30px 0;
+	text-align: center;
+}
+.site-branding a {
+	display: inline-block;
+	vertical-align: top;
+	user-select: none;
+}
+.site-branding img {
+	display: block;
 }
 
 .site-main .comment-navigation, .site-main
@@ -892,37 +898,8 @@ content: "  ";
         color: white;
     }
     
-
-.heroText {
-	  position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-        width: 100%;
-        max-width: 450px;
-        height: auto;
-        max-height: 200px;
-     border: 1px solid #fff;
-    z-index: 3;
-
-
-}
-.heroText-border
-{
-     border:1px solid #fff;
-  padding:10px;
-}
-
-.heroText-content
-{
-    padding:15px;
-    font-family: OldStandardTT Bold;
-      background-color: rgba(255,255,255,0.2);
-    z-index: 2;
-
-}
     
-/*..    .heroText 
+    .heroText 
     { 
    position: absolute;
     top: 50%;
@@ -934,6 +911,9 @@ content: "  ";
         max-height: 200px;
         border: 1px solid white;
         
+       
+        
+        
 }
 
 
@@ -941,20 +921,8 @@ content: "  ";
 {
     padding: 10px;
     font-family: OldStandardTT Bold;
-}..*/
+}
         
-.site-branding {
-	padding: 30px 0;
-	text-align: center;
-}
-.site-branding a {
-	display: inline-block;
-	vertical-align: top;
-	user-select: none;
-}
-.site-branding img {
-	display: block;
-}
 
   
 /*................end header-HERO IMAGE............*/
@@ -1059,53 +1027,13 @@ content: "  ";
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 85px;
+	margin: 0 0 1.5em;
 	/* Make sure select elements fit in widgets. */
-text-align:center;
-    border: 1px solid #dedede;
 }
 
 .widget select {
 	max-width: 100%;
 }
-.widget ul li
-{
- list-style-type: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-.widget-title {
-	position: relative;
-	text-align: center;
-	margin: 20px 0 20px;
-	z-index: 2;
-	font-size: 20px;
-}
-.widget-title span {
-	position: relative;
-	border: 1px solid #dedede;
-	background: #FFF;
-	display: inline-block;
-	vertical-align: top;
-	margin: 0;
-	text-transform: uppercase;
-	padding: 11px 5px 6px; /* headings fonts had a weird lineheight */
-}
-.widget-title span:before {
-	content: ' ';
-	position: absolute;
-	top: -7px;
-	left: -7px;
-	width: 100%;
-	height: 100%;
-	background: #FFF;
-	border: 1px solid #dedede;
-	z-index: -1;
-}
-
-.widget
 
 /*--------------------------------------------------------------
 # Content
@@ -1281,15 +1209,4 @@ object {
 }
 
 
-.site-footer
-{ 
- position: absolute;
-    left: 0;
-    bottom: 0;
-    
-    width: 100%;
-    height: 50px;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
+

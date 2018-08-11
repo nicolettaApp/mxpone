@@ -25,7 +25,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mxpone' ); ?></a>
 
@@ -62,11 +61,11 @@
 <hr>
 <?php if ( get_header_image() && is_front_page () ) : ?>
  <div class="heroImage">
-      <?php the_header_image_tag(); ?>
-        <div class="heroText" class="heroText-border">
+      <?php the_header_image_tag(); ?>" alt="">
+        <div class="heroText">
            
-            <div class="heroText-content" ><h2> Light Up your Corner</h2>
-            <p>Lifestyle June 18, 2015 </p></div>
+            <h2> Light Up your Corner</h2>
+            <p>Lifestyle </p>
         </div>
        
         </div>  
@@ -79,4 +78,4 @@
 	<div id="content" class="site-content">
 	
       
-        
+        </div>

@@ -6,29 +6,30 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package mxpone
+ * @package wpmxpone
  */
 
 ?>
 
-	
+	</div><!-- #content -->
+
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mxpone' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wpmxpone' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'mxpone' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'wpmxpone' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'mxpone' ), 'mxpone', '<a href="https://github.com/nicolettaApp">Mezei Nicoleta</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'wpmxpone' ), 'wpmxpone', '<a href="https://wordpress.org/">Mezei Nicoleta</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-</div><!-- #content -->
+</div><!--container-->
 <?php wp_footer(); ?>
 
 </body>
