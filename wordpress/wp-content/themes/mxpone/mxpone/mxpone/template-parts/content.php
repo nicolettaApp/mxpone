@@ -22,11 +22,8 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				the_category();
-				?>
-				<span class="rombSign"></span>
-				<?php
 				mxpone_posted_on();
+				mxpone_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -55,10 +52,8 @@
 		) );
 		?>
 	</div><!-- .entry-content -->
-<hr>
+
 	<footer class="entry-footer">
-		<a href="<?php echo get_permalink(); ?>"> <?php _e( 'Continue reading', 'mxpone' );?></a>
 		<?php mxpone_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
-<hr>
