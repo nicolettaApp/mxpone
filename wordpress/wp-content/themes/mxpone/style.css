@@ -40,6 +40,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Footer
+# Hero Image
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -616,9 +618,6 @@ textarea {
 
 /*--------------------------------------------------------------
 # Navigation
-
-
-
 --------------------------------------------------------------*/
 
 
@@ -650,23 +649,6 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 
-/*....header-search {
-	position: absolute;
-	display: block;
-	text-align: right;
-	margin-left: 1050px;
-	margin-top: -42px;
-}
-
-.search-field{
-	border: none;
-}
-
-.search-submit{
-	display: none;
-}
-...*/
-
 .main-navigation {
 	display: block;
 	border-top: 1px solid lightgray;
@@ -678,6 +660,7 @@ a:hover, a:active {
 .main-navigation ul {
 	display: none;
 	list-style: none;
+    font-size: 14px;
 	margin: 0;
 	padding-left: 0;
 	border-top: 1px solid lightgray;
@@ -788,8 +771,6 @@ content: "  ";
 	width: 50%;
 }
 
-/*...........HEADER...............*/
-/*.........social menu....................*/
 
 .social-menu ul
 {
@@ -824,141 +805,9 @@ content: "  ";
 .icons a:hover { background-position: left -34px; }
 
 /*...............end social menu................*/
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding-left: 15px;
-	padding-right: 15px;	
-}
-
-.site-content {
-	overflow: hidden;
-}
-.site-content .content-area {
-	float: left;
-	width: 70%;
-    padding: 35px;
-}
-.site-content .widget-area {
-	float: left;
-	width: 30%;
-}
-.site-content .widget-area a {
-	word-break: break-all;
-}
-
-.site-content .widget
-{
-    list-style: none;
-}
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
 
 
-@media screen (min-width: query__medium)
 
-    .site-header
-    {
-        display: flex;
-        justify-content: space-between}
-    
-   
-   /*....................HERO IMAGE....................*/ 
-    
-    .heroImage
-    {
-     position: relative;
-    text-align: center;
-        color: white;
-    }
-    
-
-.heroText {
-	  position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-        width: 100%;
-        max-width: 450px;
-        height: auto;
-        max-height: 200px;
-     border: 1px solid #fff;
-    padding: 15px;
-    z-index: 2;
-
-
-}
-
-
-.heroText-content
-{
-    	  position: relative;
-    margin-left: -2px;
-    margin-right: -27px;
-    margin-bottom: -26px;
-    margin-top: -5px;
-    font-family: OldStandardTT Bold;
-      background-color: rgba(255,255,255,0.2);
-    z-index: 3;
-
-}
-    
-/*..    .heroText 
-    { 
-   position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-        width: 100%;
-        max-width: 450px;
-        height: auto;
-        max-height: 200px;
-        border: 1px solid white;
-        
-}
-
-
-.heroText h2 
-{
-    padding: 10px;
-    font-family: OldStandardTT Bold;
-}..*/
-        
-.site-branding {
-	padding: 30px 0;
-	text-align: center;
-}
-.site-branding a {
-	display: inline-block;
-	vertical-align: top;
-	user-select: none;
-}
-.site-branding img {
-	display: block;
-}
-
-  
-/*................end header-HERO IMAGE............*/
     
     
 /*--------------------------------------------------------------
@@ -1056,33 +905,28 @@ content: "  ";
 	clear: both;
 }
 
-/*.............................................................
+/*--------------------------------------------------------------
 # Widgets
-..............................................................*/
+--------------------------------------------------------------*/
 .widget {
 	margin: 0 0 85px;
+	border: 1px solid #dedede;
+	padding: 0 15px 20px;
 	/* Make sure select elements fit in widgets. */
-text-align:center;
-    border: 1px solid #dedede;
 }
 
-.widget select {
-	max-width: 100%;
+.widget:last-child {
+	margin: 0;
 }
-.widget ul li
-{
- list-style-type: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
+
 .widget-title {
 	position: relative;
 	text-align: center;
-	margin: 20px 0 20px;
+	margin: -20px 0 20px;
 	z-index: 2;
 	font-size: 20px;
+    font-family: OldStandardTT-Bold, AdobeInvisFont, MyriadPro-Regular;
+color: rgba(49, 49, 49, 255);
 }
 .widget-title span {
 	position: relative;
@@ -1105,12 +949,226 @@ text-align:center;
 	border: 1px solid #dedede;
 	z-index: -1;
 }
+.widget-title i {
+	width: 8px;
+	height: 8px;
+	border-radius: 2px;
+	background: #fad393;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px 5px;
+	transform: rotate(45deg);
+	border-radius: 2px;
+}
+.widget ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+    
+}
+.widget li {
+	border-bottom: 1px solid #ededed;
+}
+.widget li:last-child {
+	border-bottom: none;
+}
 
-.widget
+.widget li a:hover {
+	display: block;
+	
+	font-weight: 700;
+}
+.widget p:last-child {
+	margin-bottom: 0;
+}
+
+
+/* Widget: Categories */
+.widget_categories li {
+	display: flex;
+	align-items: center;
+	color: #999999;
+	font-family: Lato-Bold, MyriadPro-Regular;
+color: rgba(49, 49, 49, 255);
+text-align: left;
+}
+.widget_categories li a {
+	margin-right: auto;
+	font-style: normal;
+	font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.widget_categories li a:hover {
+	
+    color: #f8c268;
+}
+
+.widget_archive li a
+{
+    color: black;
+    text-decoration: none;
+}
+.widget_archive li a:hover
+{
+       color: #f8c268;
+
+}
+/* Widget: Latest post */
+.widget_recent_entries li {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.widget_recent_entries li:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.widget_recent_entries li a {
+	font-family: 'Old Standard TT', serif;
+	padding: 0;
+    color: black;
+	font-size: 18px;
+	font-weight: 700;
+    text-decoration: none;
+}
+.widget_recent_entries li a:hover {
+	    color: #f8c268;
+
+}
+.widget_recent_entries li span {
+	font-size: 12px;
+	color: #999999;
+}
+
+/* Widget: Tag cloud */
+.tag-cloud-link {
+	border: 1px solid #dedede;
+	font-size: 12px !important;
+	color: #999999;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 0 6px 10px;
+    text-decoration: none;
+}
+.tag-cloud-link:hover {
+	border-color: #f8c268;
+    color: #f8c268;
+}
+
+.tag-cloud-a:hover {
+	color: #f8c268;
+}
+
+
+.widget .modal
+{
+    display: block;
+}
+
+.widget .modal-content
+{
+    padding: 5px;
+}
+/* Full-width input fields */
+.widget input[type=text], input[type=mail] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+   
+}
+.widget .buttonBorder
+{
+     border: 1px solid #f8c268;
+    padding: 13px;
+}
+.widget .modal-content button {
+    background-color: #fff;
+    color: black;
+   
+   padding: 10px;
+    border: 1px solid #f8c268;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+
+
+
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;	
+}
+
+.site-content {
+	overflow: hidden;
+}
+.site-content .content-area {
+	float: left;
+	width: 70%;
+    padding: 35px;
+}
+.site-content .widget-area {
+	float: left;
+	width: 30%;
+}
+.site-content .widget-area a {
+	word-break: break-all;
+}
+
+.site-content .widget
+{
+    list-style: none;
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+
+@media screen (min-width: query__medium)
+
+    .site-header
+    {
+        display: flex;
+        justify-content: space-between}
+    
+
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -1126,6 +1184,45 @@ text-align:center;
 	display: none;
 }
 /*school modif day 2 ........*/
+.postPage
+{
+    position: relative;
+    
+}
+.entry-content
+
+{
+    
+   font-family: Lato-Regular, AdobeInvisFont, MyriadPro-Regular;
+font-size: 15pt;
+color: rgb(49, 49, 49, 255);
+text-align: left;
+}
+.screen-reader-text
+{
+    display: block;
+    position: absolute;
+}
+.entry-title
+{
+    
+   font-family: OldStandardTT-Bold, AdobeInvisFont, MyriadPro-Regular;
+font-size: 36pt;
+color: #191919;
+text-align: center;
+    color: black;
+
+}
+.entry-header .entry-title a
+{
+   text-decoration: none;
+    color: #313131;
+}
+
+.entry-header .entry-title a:hover a:visited
+{
+    color: grey;
+}
 
 .entry-header .entry-title
 {
@@ -1140,7 +1237,7 @@ text-align:center;
     bottom: 0;
     left: 50%;
     transform: translateY(-50%);
-    width: 20px;
+    width: 30px;
     height: 3px;
     background-color: yellow;
     content: " ";
@@ -1159,6 +1256,72 @@ text-align:center;
 	margin: 0 0 1.5em;
 }
 
+.entry-meta {
+
+	text-align: center;
+	margin: 20px 0;
+	font-size: 12px;
+}
+.entry-meta a{
+    text-decoration: none;
+}
+.entry-meta .posted-on {
+	vertical-align: middle;
+}
+.entry-meta .rombSign {
+    
+	width: 8px;
+	height: 8px;
+	margin:0 20px;
+	border:1px solid #4c4c4c;
+	border-radius: 2px;
+	display: inline-block;
+	vertical-align: middle;
+	transform: rotate(45deg);
+}
+.entry-meta .post-categories {
+	list-style: none;
+	padding-left:0;
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+.entry-meta .post-categories li {
+	display: inline-block;
+}
+.entry-meta .post-categories li + li:before {
+	content: ', ';
+	color: #999999;
+}
+.entry-meta .post-categories a {
+	text-transform: uppercase;
+    color: #191919;
+	font-size: 13px;
+}
+.entry-meta .post-categories a:hover {
+	text-decoration: underline;
+}
+.entry-meta .posted-on a {
+	color: #999999;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.heroText-content .entry-meta li a
+{
+ color: #fff;
+
+}
+
+.heroText-content .entry-meta .posted-on a {
+	color: #fff;
+}
+.herotext-content .rombSign
+{
+    color: #fff;
+}
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1281,16 +1444,141 @@ object {
 	display: block;
 }
 
-/*.................................................................#FOOTER..........................................................*/
-.site-footer
-{ 
- position: absolute;
-    left: 0;
-    bottom: 0;
+
+  /*....................HERO IMAGE-Site Branding....................*/ 
     
-    width: 100%;
-    height: 50px;
-    background-color: black;
-    color: white;
+    .heroImage
+    {
+     position: relative;
     text-align: center;
+        color: white;
+    }
+    
+
+.heroText {
+	  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        width: 500px;
+     border: 1px solid #fff;
+    z-index: 3;
+
+
 }
+
+.heroText-content
+{
+    padding: 15px;
+    margin: 10px -10px -10px 10px;
+    font-family: OldStandardTT Bold;
+      background-color: rgba(255,255,255,0.2);
+    z-index: 2;
+
+}
+    
+        
+.site-branding {
+	padding: 30px 0;
+	text-align: center;
+}
+.site-branding a {
+	display: inline-block;
+	vertical-align: top;
+	user-select: none;
+}
+.site-branding img {
+	display: block;
+}
+
+  
+
+/*................/HERO IMAGE-Branding............*/
+
+ /*..................................................
+
+#FOOTER
+....................................................*/
+.site-footer
+{
+  position: absolute;
+    
+
+}
+
+.site-footer-info
+{
+    bottom: 0;
+    background-color: black;
+    text-align: center;
+    padding: 3px;
+    width: 900px;
+}
+#footer-widget-area
+{
+    position: relative;
+    display: block;
+    width: 32%;
+    padding: 5px;
+    float: left;
+}
+
+.widget-area .footer-widgets .widget_text 
+{
+      margin: 0 0 1% 1%;
+}
+
+.widget-area .footer-widgets .recent_comments
+{
+         margin: 0 1% 1% 1%;
+
+}
+
+.widget-area .footer-widgets .media_gallery
+{
+            margin: 0 1% 1% 0;
+
+}
+
+/*....
+.site-footer-info
+{ 
+    width: 1200px;;
+    height: 30px;
+  bottom: 0px;
+ padding: 3px;
+  background-color: #000000;
+  text-align: center;
+}
+
+.site-footer .site-footer-info a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+.site-footer .site-footer-widg .widget
+{ 
+    width: 30px;
+    height: 60px;
+    padding: 10px;
+    float: left;
+}
+
+.site-footer .site-footer-widg .widget_my_story
+{
+    margin: 0 0 1% 1%;
+}
+
+.site-footer .site-footer-widg .widget_recent_comments
+{
+     margin: 0 1% 1% 1%;
+}
+
+.site-footer .site-footer-widg .widget_flick_photos
+{
+        margin: 0 1% 1% 0;
+
+}
+....*/

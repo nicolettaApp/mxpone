@@ -15,6 +15,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
@@ -50,23 +51,31 @@
 		</div><!-- .site-branding -->
 		
 		
-		<div class="yellowHr"><span>	<nav class="social-menu">
+			<nav class="social-menu">
        <?php
 			wp_nav_menu( array(
 				'theme_location' => 'social',
 			) );
 			?>
         
-            </nav></span></div>
+            </nav>
             
 <hr>
 <?php if ( get_header_image() && is_front_page () ) : ?>
  <div class="heroImage">
       <?php the_header_image_tag(); ?>
-        <div class="heroText" class="heroText-border">
+        <div class="heroText">
            
             <div class="heroText-content" ><h2> Light Up your Corner</h2>
-            <p>Lifestyle June 18, 2015 </p></div>
+            <div class="entry-meta">
+				<?php
+				the_category();
+				?>
+				<span class="rombSign"></span>
+				<?php
+				mxpone_posted_on();
+				?>
+			</div><!-- .entry-meta -->
         </div>
        
         </div>  

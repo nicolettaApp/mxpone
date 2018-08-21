@@ -80,6 +80,7 @@ if ( ! function_exists( 'mxpone_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+        add_theme_support('post-formats', array('aside','gallery', 'image', 'video', 'link'));
 	}
 endif;
 add_action( 'after_setup_theme', 'mxpone_setup' );
@@ -99,6 +100,10 @@ function mxpone_content_width() {
 }
 add_action( 'after_setup_theme', 'mxpone_content_width', 0 );
 
+
+/*....................SIDEBAR FUNCTIONS..............*/
+
+
 /**
  * Register widget area.
  *
@@ -109,8 +114,19 @@ function mxpone_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'mxpone' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'mxpone' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title"><span><i></i>',
+		'after_title'   => '<i></i></span></h2>',
+	) );
+    
+    /*......sidebar for footer..........................*/
+    register_sidebar( array(
+		'name'          => esc_html__( 'footer', 'mxpone' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Add footer widgets here.', 'mxpone' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title"><span><i></i>',
 		'after_title'   => '<i></i></span></h2>',
 	) );
@@ -122,6 +138,10 @@ add_action( 'widgets_init', 'mxpone_widgets_init' );
  */
 function mxpone_scripts() {
     /*....mxpone style-start..............*/
+    
+    
+    wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); 
+    
     wp_enqueue_style( 'mxpone-fonts', 'https://fonts.googleapis.com/css?family=Lato:400,700,900|Old+Standard+TT');
     
 	wp_enqueue_style( 'mxpone-style', get_stylesheet_uri() );
