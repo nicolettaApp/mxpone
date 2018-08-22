@@ -13,9 +13,19 @@
 
 	</div><!-- #content -->
 	
-
       <?php get_sidebar('footer'); ?>
+
+      <div class="footerImg">
+      <img src="\wordpress\wp-content\themes\mxpone\img\footerImg.png" width="1100" height="95">
+      <div class="footerImgBorder">
+      <div class="footerImgContent">
+          <p>FOLLOW ME</p>
+          </div>
+    </div>
+      </div>
       
+</div>
+
 	<footer id="colophon" class="site-footer">
 	
       

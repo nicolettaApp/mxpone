@@ -1499,47 +1499,72 @@ object {
 
 #FOOTER
 ....................................................*/
-.site-footer
-{
-  position: absolute;
-    
-
-}
-
 .site-footer-info
 {
+    display: block;
     bottom: 0;
     background-color: black;
     text-align: center;
     padding: 3px;
-    width: 900px;
+    max-width: 900px;
 }
-#footer-widget-area
+.footer-widgets
 {
-    position: relative;
-    display: block;
-    width: 32%;
-    padding: 5px;
-    float: left;
+   margin: 2em 0 0;
+    padding: 1em 0;
+    display: flex;
+;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.widget-area .footer-widgets .widget_text 
+.footer-widgets .widget:only-of-type
 {
-      margin: 0 0 1% 1%;
+    width: 100%;
 }
 
-.widget-area .footer-widgets .recent_comments
+.footer-widgets .widget:nth-last-child(n+1),
+
+.footer-widgets .widget:nth-last-child(n+1)~ .footer-widgets .widget
+
 {
-         margin: 0 1% 1% 1%;
+   width: 30%;
+    flex: 1 1 30%;
+    padding: 3px;
+}
+
+
+
+.footerImg
+    {
+     position: relative;
+    text-align: center;
+        color: white;
+    }
+    
+
+.footerImgBorder {
+	  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        width: 150px;
+    height: 50px;
+     border: 1px solid #fff;
+    z-index: 3;
+
 
 }
 
-.widget-area .footer-widgets .media_gallery
+.footerImgContent
 {
-            margin: 0 1% 1% 0;
+    padding: 15px;
+    font-family: OldStandardTT Bold;
+      background-color: rgba(255,255,255,0.2);
+    z-index: 2;
 
 }
-
+    
 /*....
 .site-footer-info
 { 

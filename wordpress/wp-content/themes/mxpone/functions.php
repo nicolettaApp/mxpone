@@ -122,7 +122,7 @@ function mxpone_widgets_init() {
     
     /*......sidebar for footer..........................*/
     register_sidebar( array(
-		'name'          => esc_html__( 'footer', 'mxpone' ),
+		'name'          => esc_html__( 'Footer', 'mxpone' ),
 		'id'            => 'footer-1',
 		'description'   => esc_html__( 'Add footer widgets here.', 'mxpone' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
