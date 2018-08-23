@@ -16,7 +16,7 @@
       <?php get_sidebar('footer'); ?>
 
       <div class="footerImg">
-      <img src="\wordpress\wp-content\themes\mxpone\img\footerImg.png" width="1100" height="95">
+      <img src="http://localhost/wordpress-4.9.7/wordpress/wp-content/uploads/2018/08/footerImg-e1535053892334.png" width="1100" height="95">
       <div class="footerImgBorder">
       <div class="footerImgContent">
           <p>FOLLOW ME</p>

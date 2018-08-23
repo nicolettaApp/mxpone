@@ -1533,7 +1533,14 @@ object {
     padding: 3px;
 }
 
-
+.footer-widgets .widget img
+{
+    width: 100%;
+    max-width: 35px;
+    height: 100%;
+    max-height: 35px;
+    padding: 2px;
+}
 
 .footerImg
     {
@@ -1558,11 +1565,19 @@ object {
 
 .footerImgContent
 {
-    padding: 15px;
+     height: 45px;
+padding: 3px;
     font-family: OldStandardTT Bold;
-      background-color: rgba(255,255,255,0.2);
+      background-color: rgba(128,128,128,0.9);
     z-index: 2;
 
+}
+
+.footerImgContent p
+{
+      margin: 0 -10px -10px 0;
+    
+    
 }
     
 /*....
