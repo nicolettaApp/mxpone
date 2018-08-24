@@ -1101,7 +1101,6 @@ text-align: left;
 
 
 
-
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -1165,13 +1164,80 @@ text-align: left;
     .site-header
     {
         display: flex;
-        justify-content: space-between}
+        justify-content: space-between;}
     
 
 
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.archive-view .post__content
+{
+
+    padding: 0;
+    margin-bottom: 1px;
+    
+    
+}
+
+.entry-footer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	position: relative;
+    padding: 3px;
+    
+}
+ .entry-footer .entry-social-menu
+{
+
+    float: right;
+
+}
+
+
+.entry-footer .authorReading
+{
+
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+ .entry-footer .entry-social-menu
+{
+    float: right;
+    
+}
+ .entry-footer .entry-social-menu ul
+{
+     list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+   
+}
+
+ .entry-footer .continueReading
+{
+
+    float: left;
+    
+}
+
+
+.entry-footer .entry-social-menu ul a
+{
+    padding: 3px; ;
+    color: grey;
+    text-decoration: none;
+    float: right;
+    
+}
+
+
 .sticky {
 	display: block;
 }
@@ -1513,7 +1579,6 @@ object {
    margin: 2em 0 0;
     padding: 1em 0;
     display: flex;
-;
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -1536,10 +1601,9 @@ object {
 .footer-widgets .widget img
 {
     width: 100%;
-    max-width: 35px;
+    max-width: 75px;
     height: 100%;
-    max-height: 35px;
-    padding: 2px;
+    max-height: 75px;
 }
 
 .footerImg
@@ -1547,6 +1611,7 @@ object {
      position: relative;
     text-align: center;
         color: white;
+        margin-bottom: 0;
     }
     
 
@@ -1566,19 +1631,16 @@ object {
 .footerImgContent
 {
      height: 45px;
-padding: 3px;
+padding: 3px 3px;
+        align-content: center;
+
     font-family: OldStandardTT Bold;
       background-color: rgba(128,128,128,0.9);
     z-index: 2;
 
 }
 
-.footerImgContent p
-{
-      margin: 0 -10px -10px 0;
-    
-    
-}
+
     
 /*....
 .site-footer-info

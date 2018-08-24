@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="post__content">
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -57,8 +58,17 @@
 	</div><!-- .entry-content -->
 <hr>
 	<footer class="entry-footer">
-		<a href="<?php echo get_permalink(); ?>"> <?php _e( 'Continue reading', 'mxpone' );?></a>
-		<?php mxpone_entry_footer(); ?>
+	<div class="continueReading">
+        <a href="<?php echo get_permalink(); ?>"> <?php _e( 'Continue reading', 'mxpone' );?></a> </div>  <div class="authorReading"><?php echo get_the_author (); ?><?php get_comments_number(); ?>
+        </div><div class="entry-social-menu">
+       <?php
+			wp_nav_menu( array(
+				'theme_location' => 'social',
+			) );
+			?>
+        
+            </div>
 	</footer><!-- .entry-footer -->
+    </div>
 </article><!-- #post-<?php the_ID(); ?> -->
 <hr>
