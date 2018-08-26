@@ -1148,6 +1148,16 @@ text-align: left;
 .post-navigation .nav-previous {
 	float: left;
 	width: 50%;
+    
+}
+
+ .nav-previous a 
+{
+    font-family: OldStandardTT-Italic, AdobeInvisFont, MyriadPro-Regular;
+font-size: 18pt;
+color: rgba(49, 49, 49, 255);
+text-align: left;
+    text-decoration: none;
 }
 
 .comment-navigation .nav-next,
@@ -1171,6 +1181,10 @@ text-align: left;
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.entry-footer .comments__count
+{
+    
+}
 .archive-view .post__content
 {
 
@@ -1203,11 +1217,17 @@ text-align: left;
     margin: 0;
     padding: 0;
     float: right;
+    font-family: Lato-BoldItalic;
+font-size: 12pt;
+    font-style: italic;
+color: rgba(153, 153, 153, 255);
+text-align: center;
 }
 
  .entry-footer .entry-social-menu
 {
     float: right;
+    font-size: 13px;
     
 }
  .entry-footer .entry-social-menu ul
@@ -1220,11 +1240,13 @@ text-align: left;
    
 }
 
- .entry-footer .continueReading
+ .entry-footer .continueReading a
 {
 
     float: left;
-    
+    text-decoration: none;
+    color: #f8c268;
+    padding: 0 2px;
 }
 
 
@@ -1351,6 +1373,7 @@ text-align: center;
 	margin: 0;
 	display: inline-block;
 	vertical-align: middle;
+    color: #f8c268;
 }
 .entry-meta .post-categories li {
 	display: inline-block;
@@ -1363,6 +1386,7 @@ text-align: center;
 	text-transform: uppercase;
     color: #191919;
 	font-size: 13px;
+    color: #f8c268;
 }
 .entry-meta .post-categories a:hover {
 	text-decoration: underline;
@@ -1394,11 +1418,40 @@ text-align: center;
 .comment-content a {
 	word-wrap: break-word;
 }
+.comment .avatar
+{
+    border-radius: 50%;
+}
+
 
 .bypostauthor {
 	display: block;
 }
 
+
+.bypostauthor .avatar
+{
+    box-sizing: content-box;
+    border: 5px solid #000;
+    margin-top: -5px;
+    margin-left: -5px;
+    
+    
+}
+
+.comment-navigation .nav-links .nav-previous a
+{
+     border: 1px solid black;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.comment-navigation .nav-links .nav-next a
+{
+     border: 1px solid black;
+    padding: 5px;
+    text-decoration: none;
+}
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -1577,7 +1630,7 @@ object {
 .footer-widgets
 {
    margin: 2em 0 0;
-    padding: 1em 0;
+    padding: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1596,14 +1649,21 @@ object {
    width: 30%;
     flex: 1 1 30%;
     padding: 3px;
+    max-height: 275px;
+    max-width: 250px;
+}
+
+.footer-widgets .widget-title
+{
+    font-size: 16px;
 }
 
 .footer-widgets .widget img
 {
-    width: 100%;
-    max-width: 75px;
-    height: 100%;
-    max-height: 75px;
+    width: 65%;
+    max-width: 45px;
+    height: 65%;
+    max-height: 45px;
 }
 
 .footerImg
@@ -1630,10 +1690,9 @@ object {
 
 .footerImgContent
 {
-     height: 45px;
-padding: 3px 3px;
+     height: 50px;
+padding: 10px;
         align-content: center;
-
     font-family: OldStandardTT Bold;
       background-color: rgba(128,128,128,0.9);
     z-index: 2;

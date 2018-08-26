@@ -40,7 +40,7 @@
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'mxpone' ),
+				__( 'CONTINUE READING <span class="screen-reader-text"> "%s"</span>', 'mxpone' ),
 				array(
 					'span' => array(
 						'class' => array(),
@@ -59,8 +59,8 @@
 <hr>
 	<footer class="entry-footer">
 	<div class="continueReading">
-        <a href="<?php echo get_permalink(); ?>"> <?php _e( 'Continue reading', 'mxpone' );?></a> </div>  <div class="authorReading"><?php echo get_the_author (); ?><?php get_comments_number(); ?>
-        </div><div class="entry-social-menu">
+        <a href="<?php echo get_permalink(); ?>"> <?php _e( 'CONTINUE READING', 'mxpone' );?></a> </div>  <div class="authorReading"><?php echo get_the_author (); ?> | <?php echo get_comments_number_text(); ?>
+        </div>|<div class="entry-social-menu">
        <?php
 			wp_nav_menu( array(
 				'theme_location' => 'social',
