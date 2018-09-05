@@ -62,7 +62,14 @@ html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
         box-sizing: border-box;
+    
 
+}
+
+.container
+{
+max-width: 1170px;
+    margin: 0;
 }
 /* Sections
 	 ========================================================================== */
@@ -73,8 +80,7 @@ html {
 
 body {
 	margin: 0 auto;
-    max-width: 900px;
-    
+  
     
    
 }
@@ -655,6 +661,7 @@ a:hover, a:active {
 	border-bottom: 1px solid lightgray;
 	padding: 3px 0;
 	margin-top: 20px;
+    
 }
 
 .main-navigation ul {
@@ -1253,7 +1260,7 @@ text-align: center;
 .entry-footer .entry-social-menu ul a
 {
     padding: 3px; ;
-    color: grey;
+    color: #999999;
     text-decoration: none;
     float: right;
     
@@ -1432,25 +1439,105 @@ text-align: center;
 .bypostauthor .avatar
 {
     box-sizing: content-box;
-    border: 5px solid #000;
+    border: 5px solid #ff0000;
     margin-top: -5px;
     margin-left: -5px;
     
     
 }
 
-.comment-navigation .nav-links .nav-previous a
+
+.comment-navigation .nav-links a
 {
      border: 1px solid black;
+    border-bottom: 1px solid black;
     padding: 5px;
     text-decoration: none;
+    font-size: 12px;
 }
 
-.comment-navigation .nav-links .nav-next a
+
+.navigation .nav-next a
 {
-     border: 1px solid black;
-    padding: 5px;
+    
     text-decoration: none;
+    font-family: OldStandardTT-Italic, AdobeInvisFont, MyriadPro-Regular;
+font-size: 18pt;
+color: rgba(49, 49, 49, 255);
+text-align: left;
+    font-style: italic;
+}
+
+.navigation .nav-previous a
+{
+    
+    text-decoration: none;
+   font-family: OldStandardTT-Italic, AdobeInvisFont, MyriadPro-Regular;
+font-size: 18pt;
+color: rgba(49, 49, 49, 255);
+text-align: right;
+        font-style: italic;
+
+}
+
+
+.comments-area
+{
+    width: 100%;
+    margin: 3em 0;
+    padding: 1.5em 0;
+    border-top: 1px solid hsl(0, 0%, 80%);
+}
+
+.comments-title 
+{
+    margin-bottom: 2em;
+    font-family: OldStandardTT-Bold, serif;
+font-size: 18pt;
+color: rgba(49, 49, 49, 255);
+text-align: left;
+}
+ .comment-title h2:after
+{
+    content: "___";
+    color: #f8c268;
+    
+}
+.comments-list
+{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.comment-list ol
+{
+    list-style: outside none none;
+    text-decoration: none;
+}
+.comment-reply-title
+{
+    margin-bottom: 1em;
+}
+
+.comment-list .comment-reply-title
+{
+    font-family: OldStandardTT-Bold, AdobeInvisFont, MyriadPro-Regular;
+font-size: 18pt;
+color: rgba(49, 49, 49, 255);
+text-align: left;
+}
+.comment-form
+{
+   font-family: OldStandardTT-Italic, AdobeInvisFont, MyriadPro-Regular;
+font-size: 14pt;
+color: rgba(153, 153, 153, 255);
+text-align: left;
+    line-height: 1.3em;
+}
+.comment-form .form-submit
+{
+    text-align: right;
 }
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -1571,6 +1658,8 @@ object {
      position: relative;
     text-align: center;
         color: white;
+    
+       
     }
     
 
@@ -1579,7 +1668,7 @@ object {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-        width: 500px;
+       max-width: 450px;
      border: 1px solid #fff;
     z-index: 3;
 
@@ -1625,7 +1714,6 @@ object {
     background-color: black;
     text-align: center;
     padding: 3px;
-    max-width: 900px;
 }
 .footer-widgets
 {
@@ -1682,6 +1770,8 @@ object {
     transform: translate(-50%, -50%);
         width: 150px;
     height: 50px;
+            align-content: center;
+
      border: 1px solid #fff;
     z-index: 3;
 
@@ -1692,12 +1782,20 @@ object {
 {
      height: 50px;
 padding: 10px;
+    text-align: center;
         align-content: center;
     font-family: OldStandardTT Bold;
       background-color: rgba(128,128,128,0.9);
     z-index: 2;
 
 }
+
+.footerImgBorder p
+{
+padding-top: -25px;
+    text-align: center;
+}
+
 
 
     

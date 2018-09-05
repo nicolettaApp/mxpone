@@ -79,7 +79,7 @@ if ( ! function_exists( 'mxpone_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'mxpone' ),
+						__( 'LEAVE A COMMENT <span class="screen-reader-text"> on %s</span>', 'mxpone' ),
 						array(
 							'span' => array(
 								'class' => array(),
